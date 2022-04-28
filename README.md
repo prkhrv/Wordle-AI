@@ -1,6 +1,4 @@
-# CS 4701 Practicum in Artificial Intelligence 
-
-#### Authors: Arianna Curillo, Benjamin Yeh, Jessie Wong
+# Wordle AI Solver
 
 #### Library Dependencies:
 * NumPy
