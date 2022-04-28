@@ -1,2 +1,11 @@
-# Wordle-AI-Solver
-Wordle-AI-Solver dives deep into basics of Artificial Intelligence, we are proposing an agent which can utilize a combination of heuristic and non-heuristic search techniques to find the correct answer by determining the correct letters and their sequence.
+# CS 4701 Practicum in Artificial Intelligence 
+
+#### Authors: Arianna Curillo, Benjamin Yeh, Jessie Wong
+
+#### Library Dependencies:
+* NumPy
+* Selenium (4.1.0)
+* webdriver-manager
+
+#### Run Local:
+* `python playwordle.py`
