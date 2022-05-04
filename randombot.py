@@ -80,13 +80,9 @@ class RandomBot(Bot):
         for word in words.copy():
             if not self.matches_pattern(word, guess, pattern):
                 index = np.argwhere(words==word)
-                # words.remove(word)
+                # words.remove(word) # Numpy Array
                 words = np.delete(words, index)
         return words
-    
-    
-    
-    # def filter_words(self,pattern):
 
 
     def evaluate_guess(self, idx):
@@ -190,7 +186,7 @@ class RandomBot(Bot):
             check = self.evaluate_guess(i)
             if check == 1:
                 break
-            sleep(2.5)
+            sleep(3)
 
         # Quit
         sleep(3)
