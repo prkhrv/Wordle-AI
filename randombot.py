@@ -130,11 +130,14 @@ class RandomBot(Bot):
         current_state = self.state
         new_pat = ""
         guess = ""
+        correctness = 0
 
         # Parse pattern
         for i, tile in enumerate(game_tiles):
             letter = tile.get_attribute('letter')
             eval = tile.get_attribute('evaluation')
+
+            correctness+= eval_to_int[eval]
 
             guess +=letter
             # Letter is present and at exact position in answer
@@ -152,6 +155,9 @@ class RandomBot(Bot):
             # Add words to new state without letter in word
                 # new_state = [word for word in current_state if letter not in word ]
                 new_pat +="a"
+        
+        correctness /= 10
+        print('Correctness: {:.2f}'.format(correctness))
 
         self.pattern = new_pat
         self.state = self.filter_words(current_state,guess,self.pattern)
@@ -168,8 +174,7 @@ class RandomBot(Bot):
         # for letter in letters:
         #     print(letter.get_attribute('evaluation'))
         #     correctness += eval_to_int[letter.get_attribute('evaluation')]
-        # correctness /= 10
-        # print('Correctness: {:.2f}'.format(correctness))
+        
 
     def play_wordle(self):
         """
@@ -186,7 +191,7 @@ class RandomBot(Bot):
             check = self.evaluate_guess(i)
             if check == 1:
                 break
-            sleep(3)
+            sleep(5)
 
         # Quit
         sleep(3)
