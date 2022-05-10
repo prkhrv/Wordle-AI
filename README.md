@@ -1,6 +1,6 @@
-# Wordle AI Solver
+# Wordle AI
 
-<img src="https://github.com/prkhrv/Wordle-AI-Solver/blob/main/screenshots/wordle-gif.gif" height="400">&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;
+<img src="https://github.com/prkhrv/Wordle-AI/blob/main/screenshots/wordle-gif.gif" height="400">&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;
 
 ## Introduction
 
